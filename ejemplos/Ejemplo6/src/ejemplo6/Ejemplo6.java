@@ -27,7 +27,7 @@ public class Ejemplo6 {
         int edad;
         String parroquia;
         int diaPago;
-        double subtotal;
+        double descuento;
         int valorInicial = 25;
         double total;
                 
@@ -43,26 +43,42 @@ public class Ejemplo6 {
         
         System.out.println("Ingrese su edad: ");
         edad = entrada.nextInt();
+        entrada.nextLine();
         
         System.out.println("Ingrese su parroquia de residencia: ");
         parroquia = entrada.nextLine();
         
-        System.out.println("Ingrese el día que pagó su membresia: ");
+        System.out.println("Ingrese el dia que pago su membresia: ");
         diaPago = entrada.nextInt();
         
         if((diaPago <=10) && 
                 (parroquia.equals("El Valle") || parroquia.equals("El Sagrario"))){
-            subtotal = 25 * 0.5;
-            total = valorInicial - subtotal;
-            System.out.println("Obtuviste un 5% de descuento en tu membresia");
-            System.out.printf("Recibo: /n/nNombre: %s\nApellido: %s\n"
-                    + "Usuario: %s\nParroquia de residencia: %s\nEdad:"
-                    + "%d\n Dia que pagó la membresia: %d\n Valor inicial de la"
-                    + "membresia: %d\nDescuento %f\nTotal a pagar: %f\n\n"
+            
+            descuento = 25 * 0.05;
+            total = valorInicial - descuento;
+            entrada.nextLine();
+            
+            System.out.println("\nFelicidades, aplicaste a un 5% de descuento en tu membresia\n");
+            
+            System.out.printf("Recibo del Cliente: \n\nNombre: %s\nApellido: %s\n"
+                    + "Usuario: %s\nEdad: %d\nParroquia de residencia: %s\n"
+                    + "Dia que pago la membresia: %d\nValor inicial de la "
+                    + "membresia: $ %d\nDescuento: $ %.2f\nTotal a pagar: $ %.2f\n\n"
                     + "Gracias por pertenecer a fuerza total"
-                    + "", nombre, apellido, usuario, parroquia, diaPago, valorInicial,
-                    subtotal, total);
+                    + "", nombre, apellido, usuario,edad, parroquia, diaPago, valorInicial,
+                    descuento, total);
         }else{
+            
+            entrada.nextLine();
+            
+            System.out.println("\nNo cumples con los requisitos para aplicar a un 5% "
+                    + "de descuento en tu membresia\n");
+            
+            System.out.printf("Recibo del Cliente: \n\nNombre: %s\nApellido: %s\n"
+                    + "Usuario: %s\nEdad: %d\nParroquia de residencia: %s\n"
+                    + "Dia que pago la membresia: %d\nTotal a pagar: $ %d\n\n"
+                    + "Gracias por pertenecer a fuerza total"
+                    + "", nombre, apellido, usuario,edad, parroquia, diaPago, valorInicial);
            
             
         }
