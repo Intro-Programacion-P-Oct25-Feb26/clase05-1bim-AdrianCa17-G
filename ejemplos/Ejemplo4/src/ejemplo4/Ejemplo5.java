@@ -24,6 +24,7 @@ public class Ejemplo5 {
         System.out.println("Ingrese la ciudad");
         String ciudad = entrada.nextLine(); // Quito
 
+        //COn equals comparo valores de cadenas entre si
         if (!ciudad.equals("Loja")) {
             System.out.printf("%s\n", "acceso correcto");
         } else {
@@ -31,7 +32,8 @@ public class Ejemplo5 {
         }
 
         int numero = 10;
-
+        
+        //COn != o == comparo valores numericos entre si
         if (numero != 10) {
             System.out.println("correcto");
         }
