@@ -7,14 +7,16 @@ import java.util.Locale;
  *
  * @author reroes
  */
-public class Ejemplo1 {
+public class Ejemplo3 {
 
     public static void main(String[] args) {
         // Condicionales simplesmain
         Scanner entrada= new Scanner(System.in);
         entrada.useLocale(Locale.US);
         
-        double limiteNotas = 6.9;
+        // Ingresar por teclado el limite de notas
+        System.out.println("Ingrese el limite de notas: ");
+        double limiteNotas = entrada.nextDouble();
         
         /*
          double promedio;
