@@ -4,9 +4,9 @@ de vehiculos de la provincia del Guayas y Pichincha
 
 LBA - 0010
 GBC - 0010
-GBZ - 0101
+gbz - 0101
 PRZ - 2020
-PRC - 3231
+pRC - 3231
  */
 package ejemplo4;
 
@@ -37,7 +37,7 @@ public class Ejemplo7 {
         // Si el valor de ciudad es 
         // "Loja" se obtiene "L"
 
-        if ( inicial.equals("G") || inicial.equals("P")) {
+        if ( inicial.equals("G") || inicial.equals("P") || inicial.equals("g") || inicial.equals("p")) {
             System.out.printf("%s\n", "acceso correcto");
         } else {
             System.out.printf("%s\n", "acceso incorrecto");
